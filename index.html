@@ -1,0 +1,139 @@
+<!-- HackerYou Week 5 Project
+By: Christina Fung -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Game Recommendation Generator | What Should I Play Next?!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400,600|Press+Start+2P' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/hover-min.css">
+	<link rel="stylesheet" href="css/setup.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- START OF HEADER -->
+	<header>
+	<!-- START OF NAV -->
+		<nav>
+			<i class="fa fa-question-circle helpButton hvr-pulse"></i>
+
+			<div class="modalContainer">
+				<div class="overlay"></div>
+				<div class="modal">
+					<span class="closeButton"><i class="fa fa-times"></i></span>
+					<h2>How to Use<span class="underscore animated infinite flash">_</span></h2>
+					<p>"What Should I Play Next?!" is a simple video game recommendation generator that will return a top-rated video game based on your preferred gaming platform, game genre, and sleep levels. *wink wink*</p>
+					<p>Use this whenever you need to fill the void in your heart from finishing a previous game, or to confirm your awesomeness as a "hardcore gamer".</p>
+					<p>Have fun with it, and play ALL the games!</p>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="headerText">
+			<i class="logo fa fa-gamepad"></i>
+			<h1 class="title"><a href="#" title="A Simple Video Game Recommendation Generator">What Should I Play Next?!</a></h1>
+			<div class="continueLink">
+				<h2><a href="#">Click Here to Continue <i class="fa fa-caret-right startArrow animated infinite flash"></i></a></h2>	
+				<span></span>
+			</div>
+			
+		</div>
+		
+	</header>
+
+<!-- START OF MAIN SECTION -->
+	<section class="inputSection">
+		<div class="wrapper">
+			<div class="platformWrapper none">
+				<h3>step 1: choose your favourite platform.</h3>
+				<select id="platform">
+				  <option value="pc" selected>PC</option>
+				  <option value="ps3">PlayStation 3</option>
+				  <option value="ps4">PlayStation 4</option>
+				   <option value="wii-u">Wii-U</option>
+				   <option value="xbox360">Xbox 360</option>
+				   <option value="xboxone">Xbox One</option>
+				</select>
+
+				<div class="buttonWrapper">
+					<button class="platformButton hvr-pulse">submit</button>
+				</div>
+			</div>
+
+			<div class="sleepWrapper none">
+				<h3>step 2: how much sleep do you want to lose?</h3>
+				<select id="sleep">
+				  <option value="1" selected>Sleep is for the weak!</option> 
+				  <option value="2">I need my beauty sleep...</option>
+				  <option value="3">What is sleep?</option>
+				</select>
+
+				<div class="buttonWrapper">
+					<button class="sleepButton hvr-pulse">submit</button>
+				</div>
+			</div>
+
+			<div class="loadingWrapper none">
+				<!-- LOADING TEXT ANIMATION GOES HERE :) -->
+			</div>
+
+			<div class="genreWrapper none">
+				<h3>step 3: pick a sweet genre.</h3>
+				<select id="genre">
+				 	<!-- INJECT GENRES HERE -->
+				</select>
+
+				<div class="buttonWrapper">
+					<button class="genreButton hvr-pulse">gimme a game!</button>
+				</div>
+
+			</div>
+
+			<div class="gameWrapper none">
+				
+				<div class="gameContainer">
+					<!-- GAME RECOMMENDATION INFO DISPLAYS HERE -->
+				</div>
+				<div class="restartWrapper">
+					<div class="gimmeAnotherContainer none">
+						<button class="gimmeAnother hvr-pulse">gimme another!</button>
+					</div>
+					<div class="restartContainer none">
+						<button class="restart hvr-pulse">play again?</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+			
+	
+<!-- START OF FOOTER -->
+	<footer>
+		<div class="creditsContainer">
+			<div class="overlay"></div>
+			<div class="modal">
+				<span class="closeButton"><i class="fa fa-times"></i></span>
+				<h2>Credits<span class="underscore animated infinite flash">_</span></h2>
+					<ul>
+						<li>App powered by <a href="https://www.mashape.com/byroredux/metacritic-v2" target="_blank">The Unofficial Metacritic API</a></li>
+						<li>Awesome background art by <a href="http://armyoftrolls.co.uk/" target="_blank">Gary J Lucken</a></li>
+					</ul>
+				<p>Special thanks to <a href="http://www.ryanchristiani.com" target="_blank">Ryan</a> and <a href="http://www.drewminns.com" target="_blank">Drew</a> for sitting down and debugging this with me on countless occasions. You guys rock.</p>
+			</div>
+		</div>
+		<p>2015 &copy; Designed + Developed by <a href="http://www.twitter.com/christinafung_" target="_blank">this lady</a>. Mad Props to <a href="#" class="creditsLink">these guys</a>.</p>
+	</footer>
+
+	<!-- START OF JAVASCRIPT -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

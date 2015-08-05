@@ -1,0 +1,364 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url("bg4.jpg") no-repeat fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0 0 100px;
+}
+
+section {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 26px;
+}
+
+a {
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.logo {
+  font-size: 100px;
+}
+
+.wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+}
+
+.wrapper:last-child {
+  margin-right: 0;
+}
+
+.startArrow {
+  margin-left: 10px;
+}
+
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.continueLink a {
+  font-family: 'Dosis', sans-serif;
+  font-style: normal;
+}
+
+.modalContainer, .creditsContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  transform: scale(1.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.modal {
+  width: 500px;
+  padding: 15px;
+  background: black;
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  color: #fff;
+}
+
+.modal h2 {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.modal p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.headerText {
+  margin-top: 7%;
+}
+
+.headerText .title a {
+  font-style: normal;
+}
+
+.headerText h2 {
+  margin-top: 5%;
+}
+
+select {
+  margin: 0 0 2.5%;
+  padding: 2.5%;
+}
+
+.helpButton {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1%;
+  cursor: pointer;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2%;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.helpButton:hover, .helpButton:focus, .closeButton:hover, .closeButton:focus {
+  color: #ff4c45;
+}
+
+.platformButton, .sleepButton, .gimmeAnother {
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  text-align: center;
+  background: #139DDA;
+  border-bottom: 5px solid #234E9B;
+}
+
+.genreButton, .restart {
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  text-align: center;
+  border-bottom: 5px solid #9B2347;
+  background: #ff4c45;
+}
+
+.loadingWrapper {
+  margin-top: 5%;
+  font-size: 22px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.gameContainer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-left: 25.58941%;
+  text-align: left;
+}
+
+.gameContainer:last-child {
+  margin-right: 0;
+}
+
+.gameContainer p {
+  line-height: 1.5;
+}
+
+.restartWrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.restartWrapper:last-child {
+  margin-right: 0;
+}
+
+.addSpan6 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+
+.addSpan6:last-child {
+  margin-right: 0;
+}
+
+footer {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+}
+
+footer a {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer a:hover, footer a:focus {
+  color: #ff4c45;
+}
+
+footer .creditsContainer {
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+}
+
+footer .creditsContainer a {
+  font-family: 'Dosis', sans-serif;
+}
+
+footer .creditsContainer li {
+  text-align: left;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .logo {
+    font-size: 90px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .platformButton, .sleepButton, .gimmeAnother, .genreButton, .restart {
+    font-size: 12px;
+  }
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 80px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer {
+    font-size: 11px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .headerText {
+    margin-top: 17%;
+  }
+  h1 {
+    line-height: 1.5;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+  }
+  .modal p {
+    padding: 0 5%;
+  }
+  .helpButton {
+    margin: 3%;
+    font-size: 25px;
+  }
+  .loadingWrapper {
+    font-size: 16px;
+  }
+  .gimmeAnother, .restart {
+    font-size: 10px;
+    width: 170px;
+  }
+  .gimmeAnotherContainer, .restartContainer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 1.5%;
+  }
+  .gimmeAnotherContainer:last-child, .restartContainer:last-child {
+    margin-right: 0;
+  }
+  footer {
+    padding: 0 1%;
+    line-height: 2;
+  }
+}

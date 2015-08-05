@@ -1,0 +1,288 @@
+// HackerYou Week 5 Project
+// By: Christina Fung
+// CSS Stylesheet
+
+// BOURBON
+// ****************************
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+
+// MIXINS
+// ****************************
+@mixin fontWeightReset {
+	font-weight: normal;
+}
+
+@mixin marginTop5 {
+	margin-top: 5%;
+}
+
+@mixin buttonStyle {
+	border: none;
+	border-radius: 5px;
+	padding: 15px;
+	text-transform: uppercase;
+	font-family: 'Press Start 2P', cursive;
+	color: #fff;
+	text-align: center;
+}
+
+// GENERAL STYLES
+// ****************************
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.80) 100%), url('bg4.jpg') no-repeat fixed; 
+	background-size: cover;
+	//(or #222 or #353D44)
+	color: #fff;
+	margin: 0 0 100px;
+}
+
+section {
+	@include outer-container;
+}
+
+h1 {
+	font-family: 'Press Start 2P', cursive;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+
+h2 {
+	@include fontWeightReset;
+	text-transform: uppercase;
+	font-size: 32px;
+}
+
+h3 {
+	@include fontWeightReset;
+	font-size: 26px;
+}
+
+a {
+	color: #fff;
+	font-style: italic;
+	text-decoration: none;
+	font-family: 'Press Start 2P', cursive;
+
+
+}
+
+
+.logo {
+	font-size: 100px;
+}
+
+.wrapper {
+	@include span-columns(12);
+}
+
+.startArrow {
+		margin-left: 10px;
+	}
+
+
+// HIDE CLASS
+// ****************************
+.none {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+// CONTINUE LINK STYLES
+// ****************************
+.continueLink {
+	a {
+		font-family: 'Dosis', sans-serif;
+		font-style: normal;
+	}
+}
+
+// MODAL STYLES
+// ****************************
+ .modalContainer, .creditsContainer {
+ 	position: fixed;
+ 	width: 100%;
+ 	height: 100%;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 10;
+ 	display: flex;
+ 	transform: scale(1.3);
+ 	opacity: 0;
+ 	visibility: hidden;
+ 	transition: all 0.5s ease;
+ }
+
+.show {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+
+.overlay {
+ 	background: rgba(0, 0, 0, 0.45);
+ 	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+ }
+
+ .modal {
+ 	width: 500px;
+ 	padding: 15px;
+ 	background: rgb(0, 0, 0);
+ 	position: relative;
+ 	z-index: 10;
+ 	margin: auto;
+ 	color: #fff;
+
+ 	h2 {
+ 		font-family: 'Press Start 2P', cursive;
+ 	}
+
+ 	p {
+ 		text-align: left;
+ 		line-height: 1.5;
+ 	}
+ }
+
+
+// HEADER STYLES
+// ****************************
+.headerText {
+	margin-top: 7%;
+
+	.title a {
+		font-style: normal;
+	}
+
+	h2 {
+		@include marginTop5;
+	}
+}
+
+// DROP DOWN LIST STYLES
+// ****************************
+select {
+	margin: 0 0 2.5%;
+	padding: 2.5%;
+}
+
+// BUTTON STYLES
+// ****************************
+.helpButton {
+	font-size: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1%;
+	cursor:pointer;
+}
+
+ .closeButton {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	margin: 2%;
+ 	cursor: pointer;
+ 	-webkit-transition: all 0.4s ease;
+   	-moz-transition: all 0.4s ease;
+   	-o-transition: all 0.4s ease;
+   	transition: all 0.4s ease;	
+
+ }
+
+ .helpButton:hover, .helpButton:focus, .closeButton:hover, .closeButton:focus {
+ 	color: #ff4c45;
+ }
+
+.platformButton, .sleepButton, .gimmeAnother {
+	@include buttonStyle;
+	background: #139DDA;
+	border-bottom: 5px solid #234E9B;
+}
+.genreButton, .restart {
+	@include buttonStyle;
+	border-bottom: 5px solid #9B2347;
+	background: #ff4c45;
+}
+
+// LOADING BAR STYLES
+// ****************************
+.loadingWrapper {
+	@include marginTop5;
+	font-size: 22px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+// GAME CONTAINER STYLES
+// ****************************
+.gameContainer {
+	@include span-columns(6);
+	@include shift(3);
+	text-align: left;
+
+	p {
+		line-height: 1.5;
+	}
+}
+
+.restartWrapper {
+	@include span-columns(12);
+	margin-top: 3%;
+}
+
+.addSpan6 {
+	@include span-columns(6);
+}
+
+
+// FOOTER STYLES
+// ****************************
+footer {
+	font-family: 'Press Start 2P', cursive;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+
+    a {
+	  	-webkit-transition: all 0.4s ease;
+	    -moz-transition: all 0.4s ease;
+	    -o-transition: all 0.4s ease;
+	    transition: all 0.4s ease;
+    }
+
+    a:hover, a:focus {
+    	color: #ff4c45;
+    }
+
+    .creditsContainer {
+    	font-family: 'Dosis', sans-serif;
+    	font-size: 16px;
+		a {
+			font-family: 'Dosis', sans-serif;
+		}
+
+		li {
+			text-align: left;
+		}
+	}
+}
+
+// MEDIA QUERIES
+// ****************************
+@import "mediaQueries";
+
